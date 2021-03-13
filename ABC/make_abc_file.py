@@ -18,17 +18,18 @@ if len(contest_num) == 0:
 make_or_not = 'y'
 make_or_not = input('make ABC' + contest_num + '?(y/n)')
 if make_or_not != 'y':
-    print('reject process')
+    print('accept your reject this process')
     exit()
 
-if os.path.exists('./' + contest_num):
-    print('already maked ABC' + contest_num)
-    exit()
-
-
-os.mkdir('./' + contest_num)
+# ディレクトリが無ければ作る
+if not os.path.exists('./' + contest_num):
+    os.mkdir('./' + contest_num)
 
 
 for p in problem:
+    # あったらpass
+    if os.path.exists('./' + contest_num + '/' + p + '.py'):
+        continue
+
     f = open('./' + contest_num + '/' + p + '.py', 'w')
 print('complete!')
