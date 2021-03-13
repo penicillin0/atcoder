@@ -30,5 +30,5 @@ os.mkdir('./' + contest_num)
 
 
 for p in problem:
-    f = open('./ABC' + contest_num + '/' + p + '.py', 'w')
+    f = open('./' + contest_num + '/' + p + '.py', 'w')
 print('complete!')
