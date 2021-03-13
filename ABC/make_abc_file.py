@@ -21,12 +21,12 @@ if make_or_not != 'y':
     print('reject process')
     exit()
 
-if os.path.exists('./ABC' + contest_num):
+if os.path.exists('./' + contest_num):
     print('already maked ABC' + contest_num)
     exit()
 
 
-os.mkdir('./ABC' + contest_num)
+os.mkdir('./' + contest_num)
 
 
 for p in problem:
